@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_view_form_net_wage" model="ir.ui.view">
+        <field name="name">hr.employee.form.net.wage</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='wage']" position="after">
+                <label for="net_wage" groups="hr_payroll.group_hr_payroll_user"/>
+                <div class="o_row" name="net_wage" groups="hr_payroll.group_hr_payroll_user">
+                    <field name="net_wage" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
